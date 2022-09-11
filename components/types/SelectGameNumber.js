@@ -59,7 +59,7 @@ export const FlexT = styled.div`
   justify-content: center;
   align-items: center;
   height: 300px;
-  width: 400px;
+  width: 250px;
   padding: 10px;
   margin-top: 10px;
   background-color: #edc7e7;
@@ -273,7 +273,7 @@ export default function SelectGameNumber() {
     addressOrName: '0xC35fc5CEF2460e31285755F4294eaBC5c7b90341',
     contractInterface: ABI,
     functionName: 'newBets',
-    args: [[0], [[1]], [0]],
+    args: [[0], [[id]], [1]],
     overrides: {
       value: ethers.utils.parseEther('0.005'),
       gasLimit: 600000,
@@ -353,7 +353,8 @@ export default function SelectGameNumber() {
                       padding: '2px',
                       alignContent: 'center',
                       textAlign: 'center',
-                      fontSize: '20px'
+                      fontSize: '20px',
+                      fontWeight:'bold'
                     }}
                   >
                     {numero1}
@@ -364,7 +365,8 @@ export default function SelectGameNumber() {
                       padding: '2px',
                       alignContent: 'center',
                       textAlign: 'center',
-                      fontSize: '20px'
+                      fontSize: '20px',
+                      fontWeight:'bold'
                     }}
                   >
                     {numero2}
@@ -375,7 +377,8 @@ export default function SelectGameNumber() {
                       padding: '2px',
                       alignContent: 'center',
                       textAlign: 'center',
-                      fontSize: '20px'
+                      fontSize: '20px',
+                      fontWeight:'bold'
                     }}
                   >
                     {numero3}
@@ -386,7 +389,8 @@ export default function SelectGameNumber() {
                       padding: '2px',
                       alignContent: 'center',
                       textAlign: 'center',
-                      fontSize: '20px'
+                      fontSize: '20px',
+                      fontWeight:'bold'
                     }}
                   >
                     {numero4}
