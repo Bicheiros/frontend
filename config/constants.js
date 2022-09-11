@@ -30,12 +30,11 @@ export const Tipos = [
     numero3: '03',
     numero4: '04',
     numeroIndice: '1',
-    urlImage: 'https://ibb.co/g9Vc1St'
 
   },
   {
     animal: 'Águia',
-    numero1: '05',
+    numero1: '05',  
     numero2: '06',
     numero3: '07',
     numero4: '08',

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Milha, Centena, Dezena } from './types';
+import { Milha, Centena, Dezena, Write } from './types';
 
 import { Account } from './Account';
 import SelectGameNumber, { Button } from './types/SelectGameNumber';
@@ -20,13 +20,13 @@ export const ButtonHead = styled.button`
   padding: 10px;
   height: 100px;
   font-weight: bold;
-  border-radius: 20px 2px 20px 2px;
+  border-radius: 20px 20px 20px 20px;
   font-size: 20px;
   box-shadow: 7px 7px 10px #000000, -1px -1px 1px #000;
   :hover {
     background-color: #E50AD3;
     color: black;
-    border-radius: 2px 20px 2px 20px;
+    border-radius: 20px 20px 20px 20px;
   }
   :active {
     background-color: #11F455;
@@ -54,7 +54,7 @@ export default function Main() {
       {type && (
         <div>
           {type === 1 && <SelectGameNumber />}
-          {type === 2 && <Centena />}
+          {type === 2 && <Write />}
           {type === 3 && <Dezena />}
         </div>
       )}

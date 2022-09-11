@@ -1,14 +1,26 @@
-export function Centena() {
-  return (
-    <>
-      <label for="1">1:</label>
-      <input type="text" id="1" name="1" />
-      <label for="2">2:</label>
-      <input type="text" id="2" name="2" />
-      <label for="3">3:</label>
-      <input type="text" id="3" name="3" />
-      <label for="4">4:</label>
-      <input type="text" id="4" name="4" />
-    </>
-  );
-}
+import { BigNumber } from 'ethers'
+import { useEffect, useState } from 'react'
+import { useContractRead } from 'wagmi'
+import { ABI } from '../../config/Bicho'
+
+export  function TestRead() {
+
+  const [info, setInfo] = useState('')
+
+  const { data, isError, isLoading } = useContractRead({
+    addressOrName: '0xC35fc5CEF2460e31285755F4294eaBC5c7b90341',
+    contractInterface: ABI,
+    functionName: 'currentGameID',
+  })
+  const datas = data ? data.toString() : ''
+  console.log((`${datas} AAAAAAAAAAAAAAAAA`))
+
+  
+  useEffect(()=>{
+    setInfo(datas)
+  },[])
+
+  return (<><div>è ISSO que SE QUER??? {info}</div></>)
+} 
+
+

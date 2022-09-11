@@ -5,13 +5,14 @@ import {
   createClient,
   configureChains,
   defaultChains,
+  allChains,
 } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 //rainbow kit UI framework.
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 
-const { chains, provider } = configureChains(defaultChains, [publicProvider()]);
+const { chains, provider } = configureChains(allChains, [publicProvider()]);
 
 const { connectors } = getDefaultWallets({
   appName: 'My RainbowKit App',
