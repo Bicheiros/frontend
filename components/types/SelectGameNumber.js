@@ -19,7 +19,8 @@ export const Flex2 = styled.div`
   margin-bottom: 200px;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: pink;
+  opacity: 0.9;
   border-radius: 24px;
   z-index: 9999;
   color: white;
@@ -117,6 +118,22 @@ export const FlexAnimal = styled.div`
   overflow-y: scroll;
   z-index: 9999;
   background-color: transparent;
+  color: white;
+  font-family: Jost, sans-serif;
+`
+export const FlexNumber = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: pink;
+  border-radius: 2px 5px 2px 5px;
+  opacity: 0.9;
   color: white;
   font-family: Jost, sans-serif;
 `
@@ -273,7 +290,7 @@ export default function SelectGameNumber() {
     addressOrName: '0xC35fc5CEF2460e31285755F4294eaBC5c7b90341',
     contractInterface: ABI,
     functionName: 'newBets',
-    args: [[0], [[id]], [1]],
+    args: [[0], [[Number(id)]], [1]],
     overrides: {
       value: ethers.utils.parseEther('0.005'),
       gasLimit: 600000,
@@ -292,7 +309,10 @@ export default function SelectGameNumber() {
           alignContent: 'center',
           textAlign: 'center',
           color: '#50006d',
-          padding: '6px',
+          padding: '2px',
+          fontSize: '14px',
+          opacity: '0.9',
+          backgroundColor: 'pink'
         }}
         onClick={() => write?.()}
       >
@@ -347,54 +367,73 @@ export default function SelectGameNumber() {
                     textAlign: 'center',
                   }}
                 >
+                    <FlexNumber>
+
                   <div
                     style={{
-                      margin: '2px',
-                      padding: '2px',
-                      alignContent: 'center',
-                      textAlign: 'center',
-                      fontSize: '20px',
-                      fontWeight:'bold'
+                        margin: '3px',
+                        padding: '3px',
+                        alignContent: 'center',
+                        textAlign: 'center',
+                        fontSize: '24px',
+                        fontWeight:'800',
+                        color: '#ff0084',
+                        border: '2px',
+                        borderColor: 'white'
                     }}
-                  >
+                    >
+                    {id}
+                  </div>
+                  <div
+                    style={{
+                        margin: '2px',
+                        padding: '2px',
+                        alignContent: 'center',
+                        textAlign: 'center',
+                        fontSize: '20px',
+                        fontWeight:'bold'
+                    }}
+                    >
                     {numero1}
                   </div>
                   <div
                     style={{
-                      margin: '2px',
-                      padding: '2px',
-                      alignContent: 'center',
-                      textAlign: 'center',
-                      fontSize: '20px',
-                      fontWeight:'bold'
+                        margin: '2px',
+                        padding: '2px',
+                        alignContent: 'center',
+                        textAlign: 'center',
+                        fontSize: '20px',
+                        fontWeight:'bold'
                     }}
-                  >
+                    >
                     {numero2}
                   </div>
                   <div
                     style={{
-                      margin: '2px',
-                      padding: '2px',
+                        margin: '2px',
+                        padding: '2px',
                       alignContent: 'center',
                       textAlign: 'center',
                       fontSize: '20px',
                       fontWeight:'bold'
                     }}
-                  >
+                    >
                     {numero3}
                   </div>
                   <div
                     style={{
-                      margin: '2px',
-                      padding: '2px',
-                      alignContent: 'center',
-                      textAlign: 'center',
-                      fontSize: '20px',
-                      fontWeight:'bold'
+                        margin: '2px',
+                        padding: '2px',
+                        alignContent: 'center',
+                        textAlign: 'center',
+                        fontSize: '20px',
+                        fontWeight:'bold'
                     }}
-                  >
+                    >
                     {numero4}
                   </div>
+                  
+            </FlexNumber>
                 </div>
               </div>
               <div>{buttonFinal}</div>
