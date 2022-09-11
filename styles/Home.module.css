@@ -127,3 +127,15 @@
     filter: invert(1);
   }
 }
+@media (prefers-color-scheme: colored) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .container {
+    background:#42125B;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
