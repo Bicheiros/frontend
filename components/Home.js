@@ -7,7 +7,7 @@ export default function Home() {
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold">Wallets Connect Demo!</h1>
+          <h1 className="text-5xl font-bold">BICHEIRO WEB3</h1>
           <p className="py-6">
             This is wallet connect demo page created by ayden lee.If you get any
             problems when using this demo, feel free to connect me!
