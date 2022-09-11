@@ -26,12 +26,9 @@ export default function Header() {
           href="https://github.com/Bicheiros/frontend"
         >
           Github
-        </a> 
-        
-        
+        </a>
       </div>
 
-  
       <div className="navbar-start"></div>
 
       <div className="navbar-end">
@@ -57,12 +54,6 @@ export default function Header() {
               onClick={openAccountModal}
             >
               Profile
-            </button>
-            <button
-              className="btn btn-sm btn-outline btn-primary ml-3 normal-case"
-              onClick={() => console.log('show past events')}
-            >
-              Events
             </button>
             <button
               className="btn btn-sm btn-outline btn-primary ml-3 normal-case"
